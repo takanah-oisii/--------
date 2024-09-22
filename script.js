@@ -35,6 +35,7 @@ const block = () =>{
 
     for (let i = 1; i < 11; i++) {
         yoko = document.getElementById(i + 'yoko');
+        clear = getCookie()
 
         for (let i = 1; i <11; i++){
             let end
@@ -52,9 +53,8 @@ const block = () =>{
 };
 
 const yomikomi = () => {
-    clear = getCookie()
      
-    for (let i = 0; i < 101; i++) {
+    for (let i = 0; i < 100; i++) {
         if(clear.includes(i+1)){
             const replase = document.querySelector(`.a${i+1}`);
             if(!(replase.classList.contains('box-clear'))){
