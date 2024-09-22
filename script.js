@@ -60,6 +60,7 @@ const yomikomi = () => {
             if(replase.classList.contains('box-notclear')){
                 replase.classList.add('box-clear')
                 replase.classList.remove('box-notclear')
+                console.log(replase.classList)
             }
         };
     };
@@ -110,7 +111,7 @@ undo.addEventListener('click', () => {
 const setCookie = (name, json)=>{
 
 
-    let cookie = '';
+    let cookies = '';
     let expire = '';
     let period = '';
 
