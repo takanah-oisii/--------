@@ -1,0 +1,74 @@
+.box-notclear{
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    background-color: #DCB;
+    border-radius: 10px;
+    border: 0;
+    margin: 2px;
+}
+
+.box-clear{
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  background-color: #DEB;
+  border-radius: 10px;
+  border: 0;
+  margin: 2px;
+}
+
+#undo{
+    font-size: 30px;
+    height: 70px;
+    width: 300px;
+    background-color: #DCB;
+    border-radius: 10px;
+    border: 0px;
+    margin: 2px;
+}
+
+#ans{
+    height: 30px;
+    background-color: #FED;
+    border-radius: 3px;
+    border: 0px;
+}
+
+#submit{
+    font-size: 20px;
+    height: 30px;
+    width: 60px;
+    background-color: #DCB;
+    border-radius: 10px;
+    border: 0;
+    margin: 2px;
+}
+
+.final{
+    font-size: 30px;
+    height: 60px;
+    width: 636px;
+    background-color: #444;
+    color: #DDD;
+    border-radius: 10px;
+    border: 0;
+    margin: 2px;
+}
+
+div{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-size: 30px;
+}
+
+body{
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}
