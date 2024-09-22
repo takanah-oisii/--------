@@ -53,11 +53,11 @@ const block = () =>{
 };
 
 const yomikomi = () => {
-     
+    clear = getCookie()
     for (let i = 0; i < 100; i++) {
         if(clear.includes(i+1)){
             const replase = document.querySelector(`.a${i+1}`);
-            if(!(replase.classList.contains('box-clear'))){
+            if(replase.classList.contains('box-notclear')){
                 replase.classList.add('box-clear')
                 replase.classList.remove('box-notclear')
             }
@@ -102,9 +102,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
 const undo = document.getElementById('undo');
 undo.addEventListener('click', () => {
+    yomikomi()
     hide('botton',false)
     hide('mondai',true)
-    yomikomi()
 })
 
 const setCookie = (name, json)=>{
