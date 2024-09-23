@@ -49,7 +49,7 @@ const block = () =>{
 
 const yomikomi = () => {
     if(!(getCookie() == null)){
-        clear = getCookie
+        clear = getCookie()
     }
     console.log(clear)
     for(let i=0; i<clear.length; i++){
