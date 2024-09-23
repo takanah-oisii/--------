@@ -72,6 +72,7 @@ submit.addEventListener('click', () => {
     if (element.value == ans[Qnum]){
         head.innerHTML = '正解'
         body.innerHTML = `おめでとうございます！あなたは${Qnum+1}問目に正解しました！`;
+        console.log(clear)
         if (!(clear.includes(Qnum+1))){
             clear.push(Qnum+1)
             setCookie('progress',clear)
@@ -130,8 +131,8 @@ const setCookie = (name, json)=>{
 const getCookie = ()=>{
     
     let cookies = '';
-    let cookieArray = new Array();
-    let result = new Array();
+    let cookieArray = [];
+    let result = [];
 
     //Cookieを取得する
     cookies = document.cookie;
