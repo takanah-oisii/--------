@@ -2,7 +2,7 @@ const ans = [
     'さんぷる',
 ];
 
-let clear = [0]
+let clear = []
 let Qnum
 let yoko 
 let haiti
@@ -12,8 +12,7 @@ const hide = (id, bool) => {
     const sore = document.getElementById(id);
     if(bool){
         sore.style.display = 'none';
-    }
-    else{
+    }else{
         sore.style.display = '';
     }
 };
@@ -28,15 +27,11 @@ const mondai = (num,imagename) => {
 const block = () =>{
     const body = document.getElementById('botton');
     for (let i = 1; i < 12; i++) {
-
         body.insertAdjacentHTML('beforeend',`<div id="${i}yoko" class="yoko"></div>`);
     };
     haiti = 1;
-
     for (let i = 1; i < 11; i++) {
         yoko = document.getElementById(i + 'yoko');
-        clear = getCookie()
-
         for (let i = 1; i <11; i++){
             let end
             if(clear.includes(i+1)){
@@ -53,17 +48,18 @@ const block = () =>{
 };
 
 const yomikomi = () => {
-    clear = getCookie()
-    for (let i = 0; i < 100; i++) {
-        if(clear.includes(i+1)){
-            const replase = document.querySelector(`.a${i+1}`);
-            if(replase.classList.contains('box-notclear')){
-                replase.classList.add('box-clear')
-                replase.classList.remove('box-notclear')
-                console.log(replase.classList)
-            }
-        };
-    };
+    if(!(getCookie() == null)){
+        clear = getCookie
+    }
+    console.log(clear)
+    for(let i=0; i<clear.length; i++){
+        const replace = document.querySelector(`.a${i+1}`)
+        if(replace.classList.contains('box-notclear')){
+            replace.classList.remove('box-notclear')
+            replace.classList.add('box-clear')
+        }
+    }
+
 };
 
 const submit = document.getElementById('submit');
@@ -76,9 +72,8 @@ submit.addEventListener('click', () => {
     if (element.value == ans[Qnum]){
         head.innerHTML = '正解'
         body.innerHTML = `おめでとうございます！あなたは${Qnum+1}問目に正解しました！`;
-        if (clear.includes(Qnum+1)){
+        if (!(clear.includes(Qnum+1))){
             clear.push(Qnum+1)
-
             setCookie('progress',clear)
         }
     }else{
