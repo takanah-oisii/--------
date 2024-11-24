@@ -56,6 +56,10 @@
     margin: 2px;
 }
 
+#Qimage{
+    border-radius: 15px;
+}
+
 div{
     text-align: center;
 }
@@ -71,4 +75,11 @@ body{
 
 h1{
   text-align: center;
+}
+
+html{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translateY(50%) translateX(50%);
 }
