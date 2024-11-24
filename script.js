@@ -1,6 +1,16 @@
 const ans = [
     'さんぷる',
+    'どろー',
+    'つき',
+    'とり'
 ];
+
+const author = [
+    'キャットスニャイル',
+    'キャットスニャイル',
+    'ちっくわ',
+    '無限'
+]
 
 let clear = []
 let Qnum
@@ -19,8 +29,10 @@ const hide = (id, bool) => {
 
 const mondai = (num,imagename) => {
     const text = document.getElementById('num');
+    const text2 = document.getElementById('author')
     const image = document.getElementById('image');
     text.textContent = 'Q.' + num;
+    text2.textContent = '作者：' + author[num]
     image.innerHTML = '<img id="Qimage" src="image/'+num+'.png">';
 };
 
