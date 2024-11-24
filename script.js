@@ -48,9 +48,6 @@ const block = () =>{
 };
 
 const yomikomi = () => {
-    if(!(getCookie() == null)){
-        clear = getCookie()
-    }
     console.log(clear)
     for(let i=0; i<clear.length; i++){
         const replace = document.querySelector(`.a${i+1}`)
@@ -104,54 +101,6 @@ undo.addEventListener('click', () => {
     hide('mondai',true)
 })
 
-const setCookie = (name, json)=>{
-
-
-    let cookies = '';
-    let expire = '';
-    let period = '';
-
-    //Cookieの保存名と値を指定
-    cookies = name + '=' + JSON.stringify(json) + ';';
-
-    //Cookieを保存するパスを指定
-    cookies += 'path=/ ;';
-
-    //Cookieを保存する期間を指定
-    period = 30; //保存日数
-    expire = new Date();
-    expire.setTime(expire.getTime() + 1000 * 3600 * 24 * period);
-    expire.toUTCString();
-    cookies += 'expires=' + expire + ';';
-
-    //Cookieを保存する
-    document.cookie = cookies;
-};
-
-const getCookie = ()=>{
-    
-    let cookies = '';
-    let cookieArray = [];
-    let result = [];
-
-    //Cookieを取得する
-    cookies = document.cookie;
-
-    //Cookieを配列に分割してJSONに変換する
-    if(cookies){
-        cookieArray = cookies.split(';');
-        
-        cookieArray.forEach(data => {
-            data = data.split('=');
-
-            //data[0]: Cookieの名前（例では「user」）
-            //data[1]: Cookieの値（例では「json」）
-
-            result[data[0]] = JSON.parse(data[1]);
-        });
-    }
-    return result;
-}
 
 // ここからスタート
 hide('mondai',true)
