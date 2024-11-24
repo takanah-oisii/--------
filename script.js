@@ -1,15 +1,15 @@
 const ans = [
     'さんぷる',
-    'どろー',
     'つき',
+    'どろー',
     'とり'
 ];
 
 const author = [
     'キャットスニャイル',
-    'キャットスニャイル',
     'ちっくわ',
-    '無限'
+    'キャットスニャイル',
+    '無限',
 ]
 
 let clear = []
@@ -32,7 +32,7 @@ const mondai = (num,imagename) => {
     const text2 = document.getElementById('author')
     const image = document.getElementById('image');
     text.textContent = 'Q.' + num;
-    text2.textContent = '作者：' + author[num]
+    text2.textContent = '作者：' + author[num-1]
     image.innerHTML = '<img id="Qimage" src="image/'+num+'.png">';
 };
 
